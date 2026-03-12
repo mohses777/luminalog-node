@@ -13,7 +13,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "test": "node --test 'dist/**/*.test.js'",
+    "test": "node --test dist/*.test.js",
     "example:privacy": "npx tsx example/privacy-test.ts",
     "example:edtech": "npx tsx example/edtech-test.ts",
     "example:fintech": "npx tsx example/fintech-test.ts",
