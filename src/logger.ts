@@ -60,6 +60,7 @@ export class LuminaLog {
   private queue: LogEntry[] = [];
   private flushTimer: NodeJS.Timeout | null = null;
   private isFlushing = false;
+  private shutdownHandler: (() => Promise<void>) | null = null;
 
   private static readonly LOG_LEVELS: LogLevel[] = ["debug", "info", "warn", "error", "fatal", "panic"];
 
@@ -202,6 +203,7 @@ export class LuminaLog {
   }
 
   async shutdown(): Promise<void> {
+    this.removeShutdownHooks();
     this.stopFlushTimer();
     await this.flush();
   }
@@ -278,9 +280,20 @@ export class LuminaLog {
       await this.shutdown();
     };
 
+    this.shutdownHandler = gracefulShutdown;
+
     process.on("beforeExit", gracefulShutdown);
     process.on("SIGINT", gracefulShutdown);
     process.on("SIGTERM", gracefulShutdown);
+  }
+
+  private removeShutdownHooks(): void {
+    if (this.shutdownHandler) {
+      process.off("beforeExit", this.shutdownHandler);
+      process.off("SIGINT", this.shutdownHandler);
+      process.off("SIGTERM", this.shutdownHandler);
+      this.shutdownHandler = null;
+    }
   }
 
   private async sendBatchWithRetry(
