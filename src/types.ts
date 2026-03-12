@@ -29,12 +29,9 @@ export interface LogEntry {
   privacy_mode?: boolean;
   error?: ErrorPayload;
   metadata?: Record<string, unknown>;
-<<<<<<< HEAD
   trace_id?: string;
   span_id?: string;
   parent_span_id?: string;
-=======
->>>>>>> e5f310c033537bbd31a2e61ac1f265e717c2cf99
 }
 
 export interface LogBatch {

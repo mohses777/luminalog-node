@@ -1,10 +1,7 @@
 import * as https from "https";
 import * as http from "http";
 import { URL } from "url";
-<<<<<<< HEAD
 import { randomUUID } from "crypto";
-=======
->>>>>>> e5f310c033537bbd31a2e61ac1f265e717c2cf99
 import {
   LuminaLogOptions,
   LogLevel,
@@ -15,17 +12,12 @@ import {
 
 const DEFAULT_ENDPOINT = "https://api.luminalog.cloud/v1/logs";
 const DEFAULT_BATCH_SIZE = 100;
-<<<<<<< HEAD
 const MIN_BATCH_SIZE = 1;
-=======
-const MIN_BATCH_SIZE = 50;
->>>>>>> e5f310c033537bbd31a2e61ac1f265e717c2cf99
 const MAX_BATCH_SIZE = 500;
 const DEFAULT_FLUSH_INTERVAL = 5000;
 const MAX_RETRIES = 3;
 const INITIAL_RETRY_DELAY = 1000;
 
-<<<<<<< HEAD
 
 export function generateTraceId(): string {
   return randomUUID();
@@ -53,8 +45,6 @@ export function getTraceIdFromRequest(req: any): string {
   return generateTraceId();
 }
 
-=======
->>>>>>> e5f310c033537bbd31a2e61ac1f265e717c2cf99
 export class LuminaLog {
   private readonly apiKey: string;
   private readonly environment: string;
@@ -83,20 +73,11 @@ export class LuminaLog {
     this.projectId = options.projectId;
     this.privacyMode = options.privacyMode || false;
     this.minLevel = options.minLevel;
-<<<<<<< HEAD
 
     const requestedBatchSize = options.batchSize || DEFAULT_BATCH_SIZE;
     if (requestedBatchSize < MIN_BATCH_SIZE) {
       console.warn(
         `[LuminaLog] Warning: batchSize must be at least 1. Using 1 instead.`
-=======
-    
-    // Enforce batch size limits
-    const requestedBatchSize = options.batchSize || DEFAULT_BATCH_SIZE;
-    if (requestedBatchSize < MIN_BATCH_SIZE) {
-      console.warn(
-        `[LuminaLog] Warning: batchSize ${requestedBatchSize} is below minimum ${MIN_BATCH_SIZE}. Using ${MIN_BATCH_SIZE} instead to optimize costs.`
->>>>>>> e5f310c033537bbd31a2e61ac1f265e717c2cf99
       );
       this.batchSize = MIN_BATCH_SIZE;
     } else if (requestedBatchSize > MAX_BATCH_SIZE) {
@@ -107,11 +88,7 @@ export class LuminaLog {
     } else {
       this.batchSize = requestedBatchSize;
     }
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> e5f310c033537bbd31a2e61ac1f265e717c2cf99
     this.flushInterval = options.flushInterval || DEFAULT_FLUSH_INTERVAL;
     this.endpoint = options.endpoint || DEFAULT_ENDPOINT;
     this.debugMode = options.debug || false;
@@ -144,11 +121,7 @@ export class LuminaLog {
     this.log("fatal", message, metadata);
   }
 
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> e5f310c033537bbd31a2e61ac1f265e717c2cf99
   child(metadata: Record<string, unknown>): LuminaLog {
     const childLogger = new LuminaLog({
       apiKey: this.apiKey,
@@ -161,15 +134,9 @@ export class LuminaLog {
       endpoint: this.endpoint,
       debug: this.debugMode,
     });
-<<<<<<< HEAD
 
     (childLogger as any).baseMetadata = { ...this.baseMetadata, ...metadata };
 
-=======
-    
-    (childLogger as any).baseMetadata = { ...this.baseMetadata, ...metadata };
-    
->>>>>>> e5f310c033537bbd31a2e61ac1f265e717c2cf99
     return childLogger;
   }
 
@@ -264,11 +231,7 @@ export class LuminaLog {
 
     const minIndex = LuminaLog.LOG_LEVELS.indexOf(this.minLevel);
     const currentIndex = LuminaLog.LOG_LEVELS.indexOf(level);
-<<<<<<< HEAD
 
-=======
-    
->>>>>>> e5f310c033537bbd31a2e61ac1f265e717c2cf99
     return currentIndex >= minIndex;
   }
 
