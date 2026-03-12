@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+
+# Don't commit compiled JS in src/
+src/**/*.js
+src/**/*.js.map
+
+# Only dist/ should have compiled files
+!dist/**/*.js

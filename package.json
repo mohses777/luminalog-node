@@ -1,0 +1,53 @@
+{
+  "name": "@luminalog/logger",
+  "version": "0.0.0-development",
+  "description": "LuminaLog SDK - Privacy-first logging with AI-powered debugging",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node --test dist/**/*.test.js",
+    "example:privacy": "npx tsx example/privacy-test.ts",
+    "example:edtech": "npx tsx example/edtech-test.ts",
+    "example:fintech": "npx tsx example/fintech-test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "logging",
+    "observability",
+    "privacy",
+    "pii",
+    "debugging",
+    "luminalog"
+  ],
+  "author": "LuminaLog Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohses777/luminalog-node.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.6",
+    "@semantic-release/npm": "^13.1.5",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "@types/node": "^22.0.0",
+    "semantic-release": "^25.0.3",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.966.0"
+  }
+}
