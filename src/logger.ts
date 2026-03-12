@@ -10,7 +10,7 @@ import {
   IngestionResponse,
 } from "./types";
 
-const DEFAULT_ENDPOINT = "https://api.luminalog.cloud/v1/logs";
+const DEFAULT_ENDPOINT = "https://api-dev.luminalog.cloud/v1/logs";
 const DEFAULT_BATCH_SIZE = 100;
 const MIN_BATCH_SIZE = 1;
 const MAX_BATCH_SIZE = 500;
