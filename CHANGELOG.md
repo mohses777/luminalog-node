@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/mohses777/luminalog-node/compare/v1.0.1...v1.1.0) (2026-03-13)
+
+
+### Features
+
+* export trace correlation helpers ([e6c9deb](https://github.com/mohses777/luminalog-node/commit/e6c9deb3ee9f43a91f3fe89641ebf8984ec25c62))
+
 ## [1.0.1](https://github.com/mohses777/luminalog-node/compare/v1.0.0...v1.0.1) (2026-03-13)
 
 
