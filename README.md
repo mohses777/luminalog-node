@@ -5,7 +5,7 @@
   [![npm version](https://img.shields.io/npm/v/@luminalog/logger.svg)](https://www.npmjs.com/package/@luminalog/logger)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
-  [![Node.js Version](https://img.shields.io/node/v/@luminalog/logger.svg)](https://nodejs.org)
+  [![Node.js Compatibility](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org)
   
   <p>
     <a href="#installation">Installation</a> •
@@ -331,16 +331,15 @@ export const handler = async (event: any) => {
 ## Documentation
 
 - 📘 [Full Documentation](https://luminalog.cloud/docs)
-- 🚀 [Getting Started Guide](https://luminalog.cloud/docs/getting-started)
-- 📖 [API Reference](https://luminalog.cloud/docs/api)
-- 💡 [Best Practices](https://luminalog.cloud/docs/best-practices)
+- 🚀 [Quick Start Guide](https://luminalog.cloud/docs/quick-start)
+- 📖 [Node.js SDK Reference](https://luminalog.cloud/docs/sdk/nodejs)
+- � [REST API Reference](https://luminalog.cloud/docs/sdk/rest-api)
 
 ## Support
 
 - 🐛 [Report a Bug](https://github.com/mohses777/luminalog-node/issues)
-- 💬 [Discord Community](https://discord.gg/luminalog)
 - 📧 [Email Support](mailto:support@luminalog.cloud)
-- 📚 [Knowledge Base](https://luminalog.cloud/docs)
+- 𝕏 [Twitter / X](https://x.com/LuminaLogCloud)
 
 ## Contributing
 
@@ -357,7 +356,7 @@ MIT © [LuminaLog Team](https://luminalog.cloud)
   <p>
     <a href="https://luminalog.cloud">Website</a> •
     <a href="https://luminalog.cloud/docs">Docs</a> •
-    <a href="https://twitter.com/luminalog">Twitter</a> •
+    <a href="https://x.com/LuminaLogCloud">Twitter</a> •
     <a href="https://github.com/mohses777/luminalog-node">GitHub</a>
   </p>
 </div>
