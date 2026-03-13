@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/mohses777/luminalog-node/compare/v1.0.0...v1.0.1) (2026-03-13)
+
+
+### Bug Fixes
+
+* **sdk:** explicitly sync latest readme and performance settings to npm ([b14673e](https://github.com/mohses777/luminalog-node/commit/b14673eda1829e13c761d0acbff1105a03302193))
+
 # 1.0.0 (2026-03-13)
 
 

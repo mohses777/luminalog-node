@@ -1,6 +1,6 @@
 {
   "name": "@luminalog/logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "LuminaLog SDK - Privacy-first logging with AI-powered debugging",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
