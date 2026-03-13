@@ -1,4 +1,4 @@
-export { LuminaLog } from "./logger";
+export { LuminaLog, generateTraceId, generateSpanId, getTraceIdFromRequest } from "./logger";
 export type {
   LuminaLogOptions,
   LogLevel,
