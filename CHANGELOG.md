@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/mohses777/luminalog-node/compare/v1.1.0...v1.1.1) (2026-04-09)
+
+
+### Bug Fixes
+
+* **sdk:** align docs and remove unused runtime dependency ([30b2f84](https://github.com/mohses777/luminalog-node/commit/30b2f841cabf6e8e86362b1ebe10e8d7ee596255))
+
 # [1.1.0](https://github.com/mohses777/luminalog-node/compare/v1.0.1...v1.1.0) (2026-03-13)
 
 
