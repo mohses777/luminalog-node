@@ -43,6 +43,10 @@ yarn add @luminalog/logger
 pnpm add @luminalog/logger
 ```
 
+## Example App
+
+A runnable local example lives in [examples/basic](./examples/basic).
+
 ## Quick Start
 
 ```typescript
