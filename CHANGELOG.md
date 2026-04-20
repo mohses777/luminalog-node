@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/mohses777/luminalog-node/compare/v1.1.1...v1.2.0) (2026-04-20)
+
+
+### Features
+
+* add local example app ([b61493a](https://github.com/mohses777/luminalog-node/commit/b61493a5a72ea0560ddf31ff950f2ca5a22e6983))
+
 ## [1.1.1](https://github.com/mohses777/luminalog-node/compare/v1.1.0...v1.1.1) (2026-04-09)
 
 
